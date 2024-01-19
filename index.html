@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .UpgradeMenu{
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgb(16, 0, 56);
+            box-shadow: 0 0 11px gray;
+            border-radius: 0.3em;
+            z-index: 1;
+            display: none;
+            animation:  fadeIn 1s;
+    }
+    .Game{
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border-radius: 20px;
+        z-index: 0;
+    }
+    input {
+        float: right;
+        color: aliceblue;
+        border: none;
+        background: rgb(40, 0, 139);
+        border-radius: 0.3em;
+        font-size: 1.1em;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+
+    table{
+        color: aliceblue;
+        font-size: 1.1em;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+
+    @keyframes fadeIn {
+        0% { opacity: 0; }
+        100% { opacity: 1; }
+    }
+</style>
+<body>
+    <div class="UpgradeMenu" id="menu">
+        <table>
+            <tr>
+                <th id="playerStatsLabel" style="text-align: center;">
+
+                </th>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <table>
+                        <tr>
+                            <td>
+                                <table>
+                                    <tr>
+                                        <td>
+                                            Damage: <input type="button" id="damageUpgrade" value="100C">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            Max health: <input type="button" id="healthUpgrade" value="100C">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            Speed: <input type="button" id="speedUpgrade" value="100C">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            Fire rate: <input type="button" id="fireRateUpgrade" value="100C">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            Repair: <input type="button" id="repair" value="100C">
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                            <td id="menuImage">
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td style="text-align: center;">
+                    <input type="button" value="Next level" id="nextLevelButton">
+                </td>
+            </tr>
+        </table>
+    </div>
+    <script src="Common.js"></script>
+    <script src="GameObject.js"></script>
+    <script src="RectCollider.js"></script>
+    <script src="Projectile.js"></script>
+    <script src="Player.js"></script>
+    <script src="Explosion.js"></script>
+    <script src="Enemy.js"></script>
+    <script src="Background.js"></script>
+    <script src="UpgradeMenu.js"></script>
+    <script src="Game.js"></script>
+</body>
+</html>
